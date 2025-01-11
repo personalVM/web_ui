@@ -13,3 +13,7 @@ services:
     command: npm start
     networks:
       - dockernetw
+
+networks:
+  dockernetw:
+    driver: bridge
