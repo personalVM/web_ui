@@ -10,7 +10,7 @@ services:
       - "5000:5000"
     volumes:
       - ./:/app/
-    command: npm start
+    command: sh -c "npm install && npm start"
     networks:
       - dockernetw
 
