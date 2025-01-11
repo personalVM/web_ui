@@ -1,8 +1,15 @@
 version: "3.8"
 services:
   web_ui:
-    build:
-      context: .
     container_name: web_ui
+    build:
+      context: ./web_ui
+      dockerfile: Dockerfile
+    restart: always
     ports:
       - "5000:5000"
+    volumes:
+      - ./web_ui/:/app/
+    command: npm start
+    networks:
+      - dockernetw
