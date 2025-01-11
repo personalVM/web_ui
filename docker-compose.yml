@@ -9,7 +9,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./web_ui/:/app/
+      - ./:/app/
     command: npm start
     networks:
       - dockernetw
